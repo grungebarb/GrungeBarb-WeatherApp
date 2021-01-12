@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather wireframe to HTML</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/82b05f9464.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-7">
+              <input type="text" placeholder="Enter a city, please" class="form-control" id="typed-city"
+                autocomplete="off" ; />
+            </div>
+            <div class="col-2">
+              <button class="btn btn-primary px-4" id="search-city">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-secondary px-4" id="current-place">
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="row current-day">
+          <h1 id="current-city">
+          </h1>
+          <p id="current-time">
+            Monday 14, 13:13h
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <span class="current-icon">
+              <i class="fas fa-sun"></i>
+            </span>
+          </div>
+          <div class="col-6">
+            <span class="current-temperature">
+              <p id="current-temperature">
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 day-title">
+            <span class="weather-icon-ahalf border">
+              <p>Tomorrow</p>
+              <i class="fas fa-cloud-sun"></i>
+              <p id="tomorrow-temp">
+                21ºC/7ºC
+              </p>
+            </span>
+          </div>
+          <div class="col-6 day-title">
+            <span class="weather-icon-ahalf border">
+              <p>Wednesday</p>
+              <i class="fas fa-sun"></i>
+              <p id="after-tomorrow-temp">
+                28ºC/12ºC
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 day-title">
+            <span class="weather-icon-onethird border">
+              <p>
+                Thu
+              </p>
+              <i class="fas fa-cloud-sun"></i>
+            </span>
+          </div>
+          <div class="col-4 day-title">
+            <span class="weather-icon-onethird border">
+              <p>
+                Fri
+              </p>
+              <i class="fas fa-cloud-sun-rain"></i>
+            </span>
+          </div>
+          <div class="col-4 day-title">
+            <span class="weather-icon-onethird border">
+              <p>
+                Sat
+              </p>
+              <i class="fas fa-cloud-showers-heavy"></i>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 farenheit">
+            <p id="temp-units">
+              Do you want to see it on ºF?
+            </p>
+          </div>
+          <div class="col-4 farenheit">
+            <button class="btn btn-primary btn-lg" id="convert-temp">
+              YES!
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12" id="temp-anchor-change">
+            <a href="#" id="to-celsius">ºC</a>
+            |
+            <a href="#" id="to-farenheit">ºF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/script.js"></script>
+</body>
+</html>
