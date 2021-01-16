@@ -62,3 +62,10 @@ a#to-farenheit {
   text-align: center;
   font-size: 48px;
 }
+#coded-by {
+  text-align: center;
+  padding: 20px;
+  background-color: #ebedee;
+  border-radius: 5px;
+  margin-top: 10px;
+}
